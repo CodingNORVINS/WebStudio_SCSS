@@ -1,0 +1,101 @@
+@use '../utils/variables' as *;
+@use '../utils/placeholders' as *;
+@use '../utils/mixins' as *;
+@use '../utils/fonts' as *;
+
+.team {
+	background-color: $team-background;
+	padding-bottom: 94px;
+	padding-top: 94px;
+
+	&__list {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__item {
+		background-color: $about-us;
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		flex-direction: column;
+		box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+			0 1px 3px 0 rgba(0, 0, 0, 0.12);
+		border: 0;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+
+	&__image {
+		width: 270px;
+		height: 260px;
+	}
+
+	&__role {
+		@include txt($font-size: 16px, $line-height: 1em);
+		padding-bottom: 16px;
+	}
+
+	&__name {
+		@include txt($font-size: 16px, $line-height: 1em);
+		padding-top: 30px;
+		padding-bottom: 10px;
+		font-weight: 500;
+		color: $titles-color;
+	}
+
+	&__sm {
+		padding-bottom: 30px;
+		display: flex;
+		gap: 10px;
+		margin: 0 auto;
+
+		&-link {
+			padding: 12px;
+			border-radius: 100%;
+			display: inline-block;
+
+			&:hover {
+				background-color: $brand-color;
+			}
+
+			&:hover .team__sm-icon {
+				fill: $about-us;
+			}
+		}
+
+		&-icon {
+			fill: $icon-color;
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.team {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		&__list {
+			flex-wrap: wrap;
+		}
+
+		&__image {
+			max-width: 354px;
+			max-height: 374px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.team {
+		&__list {
+			justify-content: center;
+		}
+
+		&__item {
+			max-width: 450px;
+		}
+	}
+}

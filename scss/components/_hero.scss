@@ -1,0 +1,75 @@
+@use '../utils/variables' as *;
+@use '../utils/placeholders' as *;
+@use '../utils/mixins' as *;
+@use '../utils/fonts' as *;
+
+.hero {
+	background: linear-gradient(to right, $hero-overlay, $hero-overlay),
+		url(../../images/main-page/hero-bg1.jpg) center / cover no-repeat;
+	padding-block: 200px;
+
+	&__container {
+		text-align: center;
+	}
+
+	&__button {
+		padding: 10px 32px;
+		background-color: $brand-color;
+		color: $about-us;
+		border-width: 0;
+		border-radius: 4px;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		line-height: 30px;
+		font-size: 16px;
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+		font-family: $main-font;
+	}
+
+	&__title {
+		font-size: 44px;
+		font-weight: 900;
+		line-height: 60px;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: $about-us;
+		padding-bottom: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		padding-top: 118px;
+		padding-bottom: 118px;
+
+		&__title {
+			font-size: 26px;
+			line-height: 42px;
+		}
+
+		&__button {
+			padding: 10px 24px;
+		}
+	}
+}
+
+@media (min-device-pixel-ratio: 1),
+	(-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx) {
+	.hero {
+		background-image: url(../images/main-page/hero-bg2.jpg);
+	}
+}
+
+@media (min-device-pixel-ratio: 2),
+	(-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx) {
+	.hero {
+		background-image: url(../images/main-page/hero-bg3.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
