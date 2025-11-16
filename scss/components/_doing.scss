@@ -1,11 +1,13 @@
 @use '../utils/variables' as *;
 @use '../utils/placeholders' as *;
 @use '../utils/mixins' as *;
-@use '../utils/fonts' as *;
 
 .doing {
+	&__title {
+		@extend %titles;
+	}
 	padding-bottom: 94px;
-	background-color: $about-us;
+	background-color: $white-color;
 	&__list {
 		display: flex;
 		gap: 30px;
@@ -31,7 +33,7 @@
 		font-weight: 700;
 		font-size: 14px;
 		letter-spacing: 0.03em;
-		color: $about-us;
+		color: $white-color;
 	}
 
 	&__image {
@@ -40,7 +42,7 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1199px) {
 	.doing {
 		display: none;
 	}

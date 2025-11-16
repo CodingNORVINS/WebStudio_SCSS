@@ -1,10 +1,9 @@
 @use './variables' as *;
-@use './fonts' as*;
 
 @mixin txt($font-size, $line-height) {
-    color: $desc-color;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    font-size: $font-size;
-    line-height: $line-height;
+  color: $light-txt-color;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-size: $font-size;
+  line-height: $line-height;
 }

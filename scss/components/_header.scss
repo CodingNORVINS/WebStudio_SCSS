@@ -1,17 +1,9 @@
 @use '../utils/variables' as *;
-@use '../utils/placeholders' as *;
-@use '../utils/mixins' as *;
-@use '../utils/fonts' as *;
 
 .header {
-	padding-top: 24px;
-	padding-bottom: 25px;
+	padding: 24px 0;
 	border-bottom: 1px solid;
-	border-bottom-color: $item-border;
-
-	& .animation {
-		transition-duration: 300ms;
-	}
+	border-bottom-color: $header-border;
 
 	&__container {
 		display: flex;
@@ -19,232 +11,126 @@
 		justify-content: space-between;
 	}
 
-	&__wrapper {
-		display: flex;
-		align-items: center;
-		gap: 93px;
+	&__logo {
+		padding-right: 93px;
 	}
 
-	&__navigation {
-		&-list {
-			display: flex;
-			gap: 50px;
-		}
-
-		&-link {
-			color: $titles-color;
-			font-size: 14px;
-			font-weight: 500;
-			letter-spacing: 0.02em;
-
-			&:hover {
-				color: $brand-color;
-			}
-		}
-
-		&-link--current,
-		&-link--portfolio-current {
-			color: $brand-color;
-			position: relative;
-		}
-
-		&-link--current:hover::after {
-			content: '';
-			position: absolute;
-			display: inline-block;
-			border-radius: 2px;
-			top: 43px;
-			background-color: $brand-color;
-			width: 48px;
-			height: 4px;
-			left: 0;
-		}
-
-		&-link--portfolio-current:hover::after {
-			content: '';
-			position: absolute;
-			display: inline-block;
-			left: 0;
-			border-radius: 2px;
-			top: 43px;
-			background-color: $brand-color;
-			width: 78px;
-			height: 4px;
-		}
+	&__nav {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
 	}
 
 	&__list {
 		display: flex;
-		gap: 30px;
+		gap: 50px;
+		align-items: center;
 	}
 
 	&__link {
-		color: $secondary-color;
-		letter-spacing: 0.02em;
+		color: $txt-color;
+		letter-spacing: 2%;
 		font-weight: 500;
-		font-size: 14px;
-		display: flex;
-		gap: 10px;
 
 		&:hover {
-			color: $brand-color;
-		}
-
-		&:hover .header__icon {
-			fill: $brand-color;
+			color: $accent-color;
 		}
 	}
 
-	&__icon {
-		fill: $secondary-color;
+	.active {
+		position: relative;
+	}
+
+	.active::after {
+		content: '';
+		position: absolute;
+		bottom: -32px;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		border-radius: 4px;
+		background-color: $accent-color;
+	}
+
+	&__contacts {
+		display: flex;
+		gap: 30px;
+
+		&-item {
+			fill: $light-txt-color;
+
+			&:hover {
+				fill: $accent-color;
+
+				.header__contacts-link {
+					color: $accent-color;
+				}
+			}
+		}
+
+		&-link {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			color: $light-txt-color;
+			font-weight: 500;
+		}
+	}
+
+	&__mail-icon {
 		width: 16px;
 		height: 12px;
 	}
 
-	&__icon:nth-child(2) {
+	&__phone-icon {
 		width: 10px;
 		height: 16px;
 	}
 
-	&__info-list {
-		display: none;
-	}
-
-	&__sm-list {
-		display: none;
-	}
-
-	&__burger-label {
-		display: none;
-	}
-
-	&__burger-input {
+	&__menu {
+		background-color: transparent;
+		border: none;
 		display: none;
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
 	.header {
-		padding-top: 21px;
-		padding-bottom: 21px;
-
-		&__wrapper {
-			gap: 87px;
+		&__logo {
+			padding-right: 87px;
 		}
 
-		&__container {
-			gap: 96px;
-		}
-
-		&__list {
+		&__contacts {
 			flex-direction: column;
 			gap: 10px;
+
+			&-link {
+				font-size: 12px;
+			}
 		}
 
-		&__link {
-			font-size: 12px;
-		}
-
-		&__icon {
-			fill: $secondary-color;
+		&__mail-icon {
 			width: 14px;
 			height: 10px;
 		}
 
-		&__icon:nth-child(2) {
+		&__phone-icon {
 			width: 10px;
 			height: 14px;
 		}
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 	.header {
-		padding-top: 10px;
-		padding-bottom: 10px;
-
-		&__navigation-list {
+		&__logo {
+			padding-right: 0;
+		}
+		&__nav {
 			display: none;
 		}
 
-		&__list {
-			display: none;
-		}
-
-		input {
-			display: none;
-		}
-
-		label {
-			display: block;
-			width: 30px;
-			margin-left: auto;
-			top: 15px;
-			position: relative;
-			height: 100vh;
-
-			&:hover {
-				cursor: pointer;
-			}
-
-			& span {
-				display: block;
-				width: 25px;
-				height: 2px;
-				background-color: $accent-color;
-				position: absolute;
-				right: 0;
-				transition: 0.5s;
-
-				&::before {
-					content: '';
-					display: block;
-					width: 25px;
-					height: 2px;
-					background: $accent-color;
-					position: absolute;
-					right: 0;
-					transition: 0.3s;
-					top: -8px;
-				}
-
-				&::after {
-					content: '';
-					display: block;
-					width: 25px;
-					height: 2px;
-					background: $accent-color;
-					position: absolute;
-					right: 0;
-					transition: 0.3s;
-					top: 8px;
-				}
-			}
-		}
-
-		input[type='checkbox']:checked ~ &__navigation-list {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-
-		input[type='checkbox']:checked ~ label span {
-			transform: rotate(-45deg);
-		}
-		input[type='checkbox']:checked ~ label span::before {
-			top: 0;
-			transform: rotate(0);
-		}
-		input[type='checkbox']:checked ~ label span::after {
-			top: 0;
-			transform: rotate(90deg);
-		}
-
-		input[type='checkbox']:checked ~ &__list {
-			display: block;
-		}
-
-		input[type='checkbox']:checked ~ &__sm-list {
+		&__menu {
 			display: block;
 		}
 	}

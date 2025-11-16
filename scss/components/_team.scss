@@ -1,101 +1,112 @@
 @use '../utils/variables' as *;
-@use '../utils/placeholders' as *;
-@use '../utils/mixins' as *;
-@use '../utils/fonts' as *;
-
 .team {
-	background-color: $team-background;
-	padding-bottom: 94px;
-	padding-top: 94px;
+  padding: 94px 0;
+  background-color: #f4f5fa;
 
-	&__list {
-		display: flex;
-		gap: 30px;
-	}
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+  }
 
-	&__item {
-		background-color: $about-us;
-		display: flex;
-		flex-wrap: wrap;
-		text-align: center;
-		flex-direction: column;
-		box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-			0 1px 3px 0 rgba(0, 0, 0, 0.12);
-		border: 0;
-		border-bottom-right-radius: 4px;
-		border-bottom-left-radius: 4px;
-	}
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-	&__image {
-		width: 270px;
-		height: 260px;
-	}
+  &__item {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+      0 2px 1px rgba(0, 0, 0, 0.2);
+    max-width: 270px;
+    text-align: center;
+    padding-bottom: 30px;
+    overflow: hidden;
+  }
 
-	&__role {
-		@include txt($font-size: 16px, $line-height: 1em);
-		padding-bottom: 16px;
-	}
+  &__picture {
+    display: block;
+    width: 100%;
+  }
 
-	&__name {
-		@include txt($font-size: 16px, $line-height: 1em);
-		padding-top: 30px;
-		padding-bottom: 10px;
-		font-weight: 500;
-		color: $titles-color;
-	}
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-	&__sm {
-		padding-bottom: 30px;
-		display: flex;
-		gap: 10px;
-		margin: 0 auto;
+  &__name {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
 
-		&-link {
-			padding: 12px;
-			border-radius: 100%;
-			display: inline-block;
+  &__role {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #757575;
+  }
 
-			&:hover {
-				background-color: $brand-color;
-			}
+  &__social-list {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 
-			&:hover .team__sm-icon {
-				fill: $about-us;
-			}
-		}
+  &__social-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
 
-		&-icon {
-			fill: $icon-color;
-			width: 20px;
-			height: 20px;
-		}
-	}
-}
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
 
-@media (max-width: 768px) {
-	.team {
-		padding-top: 60px;
-		padding-bottom: 60px;
+  &__social-icon {
+    width: 20px;
+    height: 20px;
+    fill: #afb1b8;
+    transition: fill 0.3s ease;
 
-		&__list {
-			flex-wrap: wrap;
-		}
+    .team__social-item:hover &,
+    .team__social-item:focus & {
+      fill: #fff;
+    }
+  }
 
-		&__image {
-			max-width: 354px;
-			max-height: 374px;
-		}
-	}
-}
+  @media screen and (max-width: 1199px) {
+    &__list {
+      justify-content: space-between;
+    }
 
-@media (max-width: 480px) {
-	.team {
-		&__list {
-			justify-content: center;
-		}
+    &__item {
+      max-width: none;
+      width: calc(50% - 15px);
+    }
+  }
 
-		&__item {
-			max-width: 450px;
-		}
-	}
+  @media screen and (max-width: 767px) {
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &__item {
+      width: 100%;
+      max-width: 450px;
+    }
+  }
 }

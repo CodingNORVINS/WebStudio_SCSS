@@ -1,36 +1,38 @@
 @use '../utils/variables' as *;
 @use '../utils/placeholders' as *;
 @use '../utils/mixins' as *;
-@use '../utils/fonts' as *;
 
 .our-clients {
 	padding-top: 94px;
 	padding-bottom: 94px;
+	&__title {
+		@extend %titles;
+	}
 
 	&__list {
 		display: flex;
-		gap: 30px;
-		justify-content: center;
+		justify-content: space-between;
 	}
 
 	&__link {
 		border: 1px solid;
-		border-color: $icon-color;
+		border-color: $icons-color;
 		border-radius: 4px;
 		padding: 16px 32px;
-		display: block;
+		display: flex;
+		justify-content: center;
 
 		&:hover {
-			border-color: $brand-color;
+			border-color: $accent-color;
 		}
 
 		&:hover .our-clients__icon {
-			fill: $brand-color;
+			fill: $accent-color;
 		}
 	}
 
 	&__icon {
-		fill: $icon-color;
+		fill: $icons-color;
 		width: 106px;
 		height: 60px;
 	}
@@ -43,6 +45,7 @@
 
 		&__list {
 			flex-wrap: wrap;
+			row-gap: 30px;
 		}
 
 		&__link {

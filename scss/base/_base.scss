@@ -1,42 +1,53 @@
+@use '../utils/placeholders' as *;
 @use '../utils/variables' as *;
-@use '../utils/fonts' as *;
-
-* {
-	box-sizing: border-box;
-}
 
 body {
-	font-family: $main-font;
-	background-color: $about-us;
-}
-
-a {
-	text-decoration: none;
-}
-
-ul {
-	list-style: none;
-}
-
-.animation {
-	transition-property: color, background-color, fill, box-shadow, opacity;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 200ms;
+  font-family: $main-family;
+  color: $txt-color;
 }
 
 .container {
-	max-width: 1170px;
-	margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
 }
 
-@media (max-width: 768px) {
-	.container {
-		max-width: 738px;
-	}
+.logo {
+  display: flex;
+  font-family: $second-family;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
 }
 
-@media (max-width: 480px) {
-	.container {
-		max-width: 450px;
-	}
+.logo-accent {
+  color: $accent-color;
+}
+
+.anim {
+  transition: 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    max-width: 100%;
+  }
 }
