@@ -11,37 +11,55 @@
 		/>
 		<link rel="stylesheet" href="./css/main.css" />
 		<title>Web Studio</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header class="header">
 			<div class="header__container container">
-				<a href="#" class="header__logo logo">
+				<a href="index.html" class="header__logo logo anim" data-aos="fade-down">
 					<span class="logo-accent">Web</span> Studio
 				</a>
 				<nav class="header__nav">
 					<ul class="header__list">
-						<li class="header__item active">
-							<a href="#" class="header__link">Студія</a>
+						<li class="header__item ">
+							<a href="index.html" class="header__link anim active" data-aos="fade-down" 
+								>Студія</a
+							>
 						</li>
 						<li class="header__item">
-							<a href="portfolio.html" class="header__link">Портфоліо</a>
+							<a
+								href="portfolio.html"
+								class="header__link anim"
+								data-aos="fade-down"
+								>Портфоліо</a
+							>
 						</li>
 						<li class="header__item">
-							<a href="#" class="header__link">Контакти</a>
+							<a href="#" class="header__link anim" data-aos="fade-down""
+								>Контакти</a
+							>
 						</li>
 					</ul>
 					<ul class="header__contacts">
 						<li class="header__contacts-item">
-							<a href="mailto:@devstudio.com" class="header__contacts-link">
-								<svg class="header__mail-icon">
+							<a
+								href="mailto:@devstudio.com"
+								class="header__contacts-link anim"
+								data-aos="fade-down"
+							>
+								<svg class="header__mail-icon anim" data-aos="fade-down">
 									<use href="./images/symbol-defs.svg#icon-envelope"></use>
 								</svg>
 								info@devstudio.com
 							</a>
 						</li>
 						<li class="header__contacts-item">
-							<a href="tel:+380961111111" class="header__contacts-link">
-								<svg class="header__phone-icon">
+							<a
+								href="tel:+380961111111"
+								class="header__contacts-link anim"
+								data-aos="fade-down"
+							>
+								<svg class="header__phone-icon anim" data-aos="fade-down">
 									<use href="./images/symbol-defs.svg#icon-mobile-phone"></use>
 								</svg>
 								+38 096 111 11 11
@@ -51,74 +69,81 @@
 				</nav>
 				<button
 					type="button"
-					class="header__menu"
+					class="header__menu anim"
 					data-mobile-toggle
 					aria-label="Toggle menu"
 				>
-					<svg class="header__menu-icon" width="40px" height="40px">
+					<svg class="header__menu-icon anim" width="40px" height="40px">
 						<use href="./images/symbol-defs.svg#icon-menu"></use>
 					</svg>
 				</button>
 				<div class="mobile-menu modal is-hidden" data-mobile-menu>
 					<button
 						type="button"
-						class="mobile-menu__close"
+						class="mobile-menu__close anim"
 						data-mobile-close
 						aria-label="Close menu"
 					>
-						<svg class="mobile-menu__close-icon">
+						<svg class="mobile-menu__close-icon anim">
 							<use href="./images/symbol-defs.svg#icon-cross"></use>
 						</svg>
 					</button>
 
 					<ul class="mobile-menu__list">
 						<li class="mobile-menu__item">
-							<a href="index.html" class="mobile-menu__link">Студія</a>
+							<a href="index.html" class="mobile-menu__link anim">Студія</a>
 						</li>
 						<li class="mobile-menu__item">
-							<a href="portfolio.html" class="mobile-menu__link">Портфоліо</a>
+							<a href="portfolio.html" class="mobile-menu__link anim"
+								>Портфоліо</a
+							>
 						</li>
 						<li class="mobile-menu__item">
-							<a href="#" class="mobile-menu__link">Контакти</a>
+							<a href="#" class="mobile-menu__link anim">Контакти</a>
 						</li>
 					</ul>
 
 					<ul class="mobile-menu__contact-list">
 						<li class="mobile-menu__contact-item">
-							<a href="tel:+380961111111" class="mobile-menu__contact-number"
-								>+38 096 111 11 11</a
+							<a
+								href="tel:+380961111111"
+								class="mobile-menu__contact-number anim"
 							>
+								+38 096 111 11 11
+							</a>
 						</li>
 						<li class="mobile-menu__contact-item">
 							<a
 								href="mailto:info@devstudio.com"
-								class="mobile-menu__contact-email"
-								>info@devstudio.com</a
+								class="mobile-menu__contact-email anim"
 							>
+								info@devstudio.com
+							</a>
 						</li>
 					</ul>
 
 					<ul class="mobile-menu__social-list">
 						<li class="mobile-menu__social-item">
-							<p class="mobile-menu__social-name">Instagram</p>
+							<p class="mobile-menu__social-name anim">Instagram</p>
 						</li>
 						<li class="mobile-menu__social-item">
-							<p class="mobile-menu__social-name">Twitter</p>
+							<p class="mobile-menu__social-name anim">Twitter</p>
 						</li>
 						<li class="mobile-menu__social-item">
-							<p class="mobile-menu__social-name">Facebook</p>
+							<p class="mobile-menu__social-name anim">Facebook</p>
 						</li>
 						<li class="mobile-menu__social-item">
-							<p class="mobile-menu__social-name">LinkedIn</p>
+							<p class="mobile-menu__social-name anim">LinkedIn</p>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</header>
+
 		<main>
 			<section class="hero">
-				<h1 class="hero__title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br />ВАШОГО БІЗНЕСУ</h1>
-				<button type="button" class="hero__btn" data-modal-open>
+				<h1 class="hero__title" data-aos="flip-up">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br />ВАШОГО БІЗНЕСУ</h1>
+				<button data-aos="flip-up" type="button" class="hero__btn" data-modal-open>
 					Замовити послугу
 				</button>
 				<div class="modal-overlay modal-overlay--hidden" data-modal>
@@ -187,11 +212,14 @@
 				<div class="details__container container">
 					<ul class="details__list">
 						<li class="details__item">
-							<article class="details-card">
-								<h3 class="details-card__title details-card__title--attention">
+							<article class="details-card" data-aos="flip-up">
+								<h3
+									class="details-card__title details-card__title--attention"
+									data-aos="fade-up"
+								>
 									Увага до деталей
 								</h3>
-								<p class="details-card__description">
+								<p class="details-card__description" data-aos="fade-up">
 									Ідейні міркування, і навіть початок повсякденної роботи з
 									формування позиції.
 								</p>
@@ -199,13 +227,14 @@
 						</li>
 
 						<li class="details__item">
-							<article class="details-card">
+							<article class="details-card" data-aos="flip-up">
 								<h3
 									class="details-card__title details-card__title--punctuality"
+									data-aos="fade-up"
 								>
 									Пунктуальність
 								</h3>
-								<p class="details-card__description">
+								<p class="details-card__description" data-aos="fade-up">
 									Завдання організації, особливо рамки і місце навчання кадрів
 									тягне у себе
 								</p>
@@ -213,22 +242,28 @@
 						</li>
 
 						<li class="details__item">
-							<article class="details-card">
-								<h3 class="details-card__title details-card__title--planning">
+							<article class="details-card" data-aos="flip-up">
+								<h3
+									class="details-card__title details-card__title--planning"
+									data-aos="fade-up"
+								>
 									Планування
 								</h3>
-								<p class="details-card__description">
+								<p class="details-card__description" data-aos="fade-up">
 									Так само консультація з широким активом значною мірою зумовлює
 								</p>
 							</article>
 						</li>
 
 						<li class="details__item">
-							<article class="details-card">
-								<h3 class="details-card__title details-card__title--tech">
+							<article class="details-card" data-aos="flip-up">
+								<h3
+									class="details-card__title details-card__title--tech"
+									data-aos="fade-up"
+								>
 									Сучасні технології
 								</h3>
-								<p class="details-card__description">
+								<p class="details-card__description" data-aos="fade-up">
 									Значимість цих проблем настільки очевидна, що реалізація
 									планових завдань
 								</p>
@@ -245,41 +280,68 @@
 							<div class="doing__overlay">
 								<p class="doing__description">Десктопні додатки</p>
 							</div>
-							<img
-								src="./images/desktop/job1.jpg"
-								alt="Person Doing Job 1"
-								class="doing__image"
-							/>
+							<picture class="doing__picture">
+								<source
+									media="(min-width: 769px)"
+									srcset="
+										./images/desktop/job1.jpg       1x,
+										./images/desktop-2x/job1-2x.jpg 2x
+									"
+								/>
+								<img
+									class="doing__image"
+									src="./images/desktop/job1.jpg"
+									alt="Person Doing Job 1"
+								/>
+							</picture>
 						</li>
 						<li class="doing__item" data-aos="zoom-in-up">
 							<div class="doing__overlay">
 								<p class="doing__description">Мобільні додатки</p>
 							</div>
-							<img
-								src="./images/desktop/job2.jpg"
-								alt="Person Doing Job 2 "
-								class="doing__image"
-							/>
+							<picture class="doing__picture">
+								<source
+									media="(min-width: 769px)"
+									srcset="
+										./images/desktop/job2.jpg       1x,
+										./images/desktop-2x/job2-2x.jpg 2x
+									"
+								/>
+								<img
+									src="./images/desktop/job2.jpg"
+									alt="Person Doing Job 2"
+									class="doing__image"
+								/>
+							</picture>
 						</li>
 						<li class="doing__item" data-aos="zoom-out-left">
 							<div class="doing__overlay">
 								<p class="doing__description">Дизайнерські рішення</p>
 							</div>
-							<img
-								src="./images/desktop/job3.jpg"
-								alt="Person Doing Job 3"
-								class="doing__image"
-							/>
+							<picture class="doing__picture">
+								<source
+									media="(min-width: 769px)"
+									srcset="
+										./images/desktop/job3.jpg       1x,
+										./images/desktop-2x/job3-2x.jpg 2x
+									"
+								/>
+								<img
+									src="./images/desktop/job3.jpg"
+									alt="Person Doing Job 3"
+									class="doing__image"
+								/>
+							</picture>
 						</li>
 					</ul>
 				</div>
 			</section>
 			<section class="team">
 				<div class="team__container container">
-					<h2 class="team__title">Наша команда</h2>
+					<h2 class="team__title" data-aos="fade-down">Наша команда</h2>
 
 					<ul class="team__list">
-						<li class="team__item">
+						<li class="team__item" data-aos="fade-up">
 							<picture class="team__picture">
 								<source
 									media="(min-width: 1200px)"
@@ -302,34 +364,34 @@
 								/>
 							</picture>
 
-							<h4 class="team__name">Ігор Дем'яненко</h4>
-							<p class="team__role">Product Designer</p>
+							<h4 class="team__name" data-aos="fade-up">Ігор Дем'яненко</h4>
+							<p class="team__role" data-aos="fade-up">Product Designer</p>
 
 							<ul class="team__social-list">
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-up">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-instagram"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-up">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-twitter"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-up">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-facebook"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-up">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-linkedin"></use>
 									</svg>
 								</li>
 							</ul>
 						</li>
 
-						<li class="team__item">
+						<li class="team__item" data-aos="fade-down">
 							<picture class="team__picture">
 								<source
 									media="(min-width: 1200px)"
@@ -352,34 +414,34 @@
 								/>
 							</picture>
 
-							<h4 class="team__name">Ольга Рєпіна</h4>
-							<p class="team__role">Frontend Developer</p>
+							<h4 class="team__name" data-aos="fade-down">Ольга Рєпіна</h4>
+							<p class="team__role" data-aos="fade-down">Frontend Developer</p>
 
 							<ul class="team__social-list">
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-down">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-instagram"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-down">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-twitter"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-down">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-facebook"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-down">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-linkedin"></use>
 									</svg>
 								</li>
 							</ul>
 						</li>
 
-						<li class="team__item">
+						<li class="team__item" data-aos="fade-down">
 							<picture class="team__picture">
 								<source
 									media="(min-width: 1200px)"
@@ -402,34 +464,34 @@
 								/>
 							</picture>
 
-							<h4 class="team__name">Микола Тарасов</h4>
-							<p class="team__role">Marketing</p>
+							<h4 class="team__name" data-aos="fade-down">Микола Тарасов</h4>
+							<p class="team__role" data-aos="fade-down">Marketing</p>
 
 							<ul class="team__social-list">
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-down">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-instagram"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-down">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-twitter"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-down">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-facebook"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-down">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-linkedin"></use>
 									</svg>
 								</li>
 							</ul>
 						</li>
 
-						<li class="team__item">
+						<li class="team__item" data-aos="fade-up">
 							<picture class="team__picture">
 								<source
 									media="(min-width: 1200px)"
@@ -452,27 +514,27 @@
 								/>
 							</picture>
 
-							<h4 class="team__name">Михайло Єрмаков</h4>
-							<p class="team__role">UI Designer</p>
+							<h4 class="team__name" data-aos="fade-up">Михайло Єрмаков</h4>
+							<p class="team__role" data-aos="fade-up">UI Designer</p>
 
 							<ul class="team__social-list">
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-up">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-instagram"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-up">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-twitter"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-up">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-facebook"></use>
 									</svg>
 								</li>
-								<li class="team__social-item">
-									<svg class="team__social-icon">
+								<li class="team__social-item anim" data-aos="fade-up">
+									<svg class="team__social-icon anim">
 										<use href="./images/symbol-defs.svg#icon-linkedin"></use>
 									</svg>
 								</li>
@@ -483,55 +545,51 @@
 			</section>
 			<section class="our-clients">
 				<div class="container">
-					<h2 class="our-clients__title">Постійні клієнти</h2>
+					<h2 class="our-clients__title anim" data-aos="fade-up">
+						Постійні клієнти
+					</h2>
 					<ul class="our-clients__list">
-						<li class="our-clients__item">
-							<a href="" class="our-clients__link"
-								><svg class="our-clients__icon">
-									<use
-										href="./images/symbol-defs.svg#icon-first-client"
-									></use></svg
-							></a>
+						<li class="our-clients__item anim" data-aos="fade-up">
+							<a href="" class="our-clients__link anim" data-aos="fade-up">
+								<svg class="our-clients__icon anim">
+									<use href="./images/symbol-defs.svg#icon-first-client"></use>
+								</svg>
+							</a>
 						</li>
-						<li class="our-lients__item">
-							<a href="" class="our-clients__link"
-								><svg class="our-clients__icon">
-									<use
-										href="./images/symbol-defs.svg#icon-second-client"
-									></use></svg
-							></a>
+						<li class="our-clients__item anim">
+							<a href="" class="our-clients__link anim" data-aos="fade-up">
+								<svg class="our-clients__icon anim" data-aos="fade-up">
+									<use href="./images/symbol-defs.svg#icon-second-client"></use>
+								</svg>
+							</a>
 						</li>
-						<li class="our-clients__item">
-							<a href="" class="our-clients__link"
-								><svg class="our-clients__icon">
-									<use
-										href="./images/symbol-defs.svg#icon-third-client"
-									></use></svg
-							></a>
+						<li class="our-clients__item anim">
+							<a href="" class="our-clients__link anim" data-aos="fade-up">
+								<svg class="our-clients__icon anim" data-aos="fade-up">
+									<use href="./images/symbol-defs.svg#icon-third-client"></use>
+								</svg>
+							</a>
 						</li>
-						<li class="our-clients__item">
-							<a href="" class="our-clients__link"
-								><svg class="our-clients__icon">
-									<use
-										href="./images/symbol-defs.svg#icon-fourth-client"
-									></use></svg
-							></a>
+						<li class="our-clients__item anim">
+							<a href="" class="our-clients__link anim" data-aos="fade-up">
+								<svg class="our-clients__icon anim" data-aos="fade-up">
+									<use href="./images/symbol-defs.svg#icon-fourth-client"></use>
+								</svg>
+							</a>
 						</li>
-						<li class="our-clients__item">
-							<a href="" class="our-clients__link"
-								><svg class="our-clients__icon">
-									<use
-										href="./images/symbol-defs.svg#icon-fifth-client"
-									></use></svg
-							></a>
+						<li class="our-clients__item anim">
+							<a href="" class="our-clients__link anim" data-aos="fade-up">
+								<svg class="our-clients__icon anim" data-aos="fade-up">
+									<use href="./images/symbol-defs.svg#icon-fifth-client"></use>
+								</svg>
+							</a>
 						</li>
-						<li class="our-clients__item">
-							<a href="" class="our-clients__link"
-								><svg class="our-clients__icon">
-									<use
-										href="./images/symbol-defs.svg#icon-sixth-client"
-									></use></svg
-							></a>
+						<li class="our-clients__item anim">
+							<a href="" class="our-clients__link anim" data-aos="fade-up">
+								<svg class="our-clients__icon anim" data-aos="fade-up">
+									<use href="./images/symbol-defs.svg#icon-sixth-client"></use>
+								</svg>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -569,37 +627,33 @@
 					<div class="footer__wrapper">
 						<h3 class="footer__list-title">ПРИЄДНУЙТЕСЬ</h3>
 						<ul class="footer__list">
-							<li class="footer__list-item">
-								<a href="" class="footer__list-link animation"
-									><svg class="footer__list-icon">
-										<use
-											href="./images/symbol-defs.svg#icon-instagram"
-										></use></svg
-								></a>
+							<li class="footer__list-item anim">
+								<a href="" class="footer__list-link anim">
+									<svg class="footer__list-icon anim">
+										<use href="./images/symbol-defs.svg#icon-instagram"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__list-link animation"
-									><svg class="footer__list-icon">
-										<use
-											href="./images/symbol-defs.svg#icon-twitter"
-										></use></svg
-								></a>
+							<li class="footer__list-item anim">
+								<a href="" class="footer__list-link anim">
+									<svg class="footer__list-icon anim">
+										<use href="./images/symbol-defs.svg#icon-twitter"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__list-link animation"
-									><svg class="footer__list-icon">
-										<use
-											href="./images/symbol-defs.svg#icon-facebook"
-										></use></svg
-								></a>
+							<li class="footer__list-item anim">
+								<a href="" class="footer__list-link anim">
+									<svg class="footer__list-icon anim">
+										<use href="./images/symbol-defs.svg#icon-facebook"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__list-link animation"
-									><svg class="footer__list-icon">
-										<use
-											href="./images/symbol-defs.svg#icon-linkedin"
-										></use></svg
-								></a>
+							<li class="footer__list-item anim">
+								<a href="" class="footer__list-link anim">
+									<svg class="footer__list-icon anim">
+										<use href="./images/symbol-defs.svg#icon-linkedin"></use>
+									</svg>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -627,5 +681,9 @@
 
 		<script src="./modal.js"></script>
 		<script src="./menu.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>

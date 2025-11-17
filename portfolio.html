@@ -10,38 +10,56 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./css/main.css" />
-		<title>Web Studio</title>
+		<title>Portfolio</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header class="header">
 			<div class="header__container container">
-				<a href="#" class="header__logo logo">
+				<a href="index.html" class="header__logo logo anim" data-aos="fade-down">
 					<span class="logo-accent">Web</span> Studio
 				</a>
 				<nav class="header__nav">
 					<ul class="header__list">
-						<li class="header__item">
-							<a href="index.html" class="header__link">Студія</a>
+						<li class="header__item ">
+							<a href="index.html" class="header__link anim active" data-aos="fade-down" 
+								>Студія</a
+							>
 						</li>
-						<li class="header__item active">
-							<a href="portfolio.html" class="header__link">Портфоліо</a>
+						<li class="header__item">
+							<a
+								href="portfolio.html"
+								class="header__link anim"
+								data-aos="fade-down"
+								>Портфоліо</a
+							>
 						</li>
 						<li class="header__item">
-							<a href="#" class="header__link">Контакти</a>
+							<a href="#" class="header__link anim" data-aos="fade-down""
+								>Контакти</a
+							>
 						</li>
 					</ul>
 					<ul class="header__contacts">
 						<li class="header__contacts-item">
-							<a href="mailto:@devstudio.com" class="header__contacts-link">
-								<svg class="header__mail-icon">
+							<a
+								href="mailto:@devstudio.com"
+								class="header__contacts-link anim"
+								data-aos="fade-down"
+							>
+								<svg class="header__mail-icon anim" data-aos="fade-down">
 									<use href="./images/symbol-defs.svg#icon-envelope"></use>
 								</svg>
 								info@devstudio.com
 							</a>
 						</li>
 						<li class="header__contacts-item">
-							<a href="tel:+380961111111" class="header__contacts-link">
-								<svg class="header__phone-icon">
+							<a
+								href="tel:+380961111111"
+								class="header__contacts-link anim"
+								data-aos="fade-down"
+							>
+								<svg class="header__phone-icon anim" data-aos="fade-down">
 									<use href="./images/symbol-defs.svg#icon-mobile-phone"></use>
 								</svg>
 								+38 096 111 11 11
@@ -51,65 +69,71 @@
 				</nav>
 				<button
 					type="button"
-					class="header__menu"
+					class="header__menu anim"
 					data-mobile-toggle
 					aria-label="Toggle menu"
 				>
-					<svg class="header__menu-icon" width="40px" height="40px">
+					<svg class="header__menu-icon anim" width="40px" height="40px">
 						<use href="./images/symbol-defs.svg#icon-menu"></use>
 					</svg>
 				</button>
 				<div class="mobile-menu modal is-hidden" data-mobile-menu>
 					<button
 						type="button"
-						class="mobile-menu__close"
+						class="mobile-menu__close anim"
 						data-mobile-close
 						aria-label="Close menu"
 					>
-						<svg class="mobile-menu__close-icon">
+						<svg class="mobile-menu__close-icon anim">
 							<use href="./images/symbol-defs.svg#icon-cross"></use>
 						</svg>
 					</button>
 
 					<ul class="mobile-menu__list">
 						<li class="mobile-menu__item">
-							<a href="index.html" class="mobile-menu__link">Студія</a>
+							<a href="index.html" class="mobile-menu__link anim">Студія</a>
 						</li>
 						<li class="mobile-menu__item">
-							<a href="portfolio.html" class="mobile-menu__link">Портфоліо</a>
+							<a href="portfolio.html" class="mobile-menu__link anim"
+								>Портфоліо</a
+							>
 						</li>
 						<li class="mobile-menu__item">
-							<a href="#" class="mobile-menu__link">Контакти</a>
+							<a href="#" class="mobile-menu__link anim">Контакти</a>
 						</li>
 					</ul>
 
 					<ul class="mobile-menu__contact-list">
 						<li class="mobile-menu__contact-item">
-							<a href="tel:+380961111111" class="mobile-menu__contact-number"
-								>+38 096 111 11 11</a
+							<a
+								href="tel:+380961111111"
+								class="mobile-menu__contact-number anim"
 							>
+								+38 096 111 11 11
+							</a>
 						</li>
 						<li class="mobile-menu__contact-item">
 							<a
 								href="mailto:info@devstudio.com"
-								class="mobile-menu__contact-email"
-								>info@devstudio.com</a
+								class="mobile-menu__contact-email anim"
 							>
+								info@devstudio.com
+							</a>
 						</li>
 					</ul>
 
 					<ul class="mobile-menu__social-list">
 						<li class="mobile-menu__social-item">
-							<p class="mobile-menu__social-name">Instagram</p>
+							<p class="mobile-menu__social-name anim">Instagram</p>
 						</li>
 						<li class="mobile-menu__social-item">
-							<p class="mobile-menu__social-name">Twitter</p>
+							<p class="mobile-menu__social-name anim">Twitter</p>
 						</li>
 						<li class="mobile-menu__social-item">
-							<p class="mobile-menu__social-name">Facebook</p>
+							<p class="mobile-menu__social-name anim">Facebook</p>
 						</li>
 						<li class="mobile-menu__social-item">
-							<p class="mobile-menu__social-name">LinkedIn</p>
+							<p class="mobile-menu__social-name anim">LinkedIn</p>
 						</li>
 					</ul>
 				</div>
@@ -148,37 +172,33 @@
 					<div class="footer__wrapper">
 						<h3 class="footer__list-title">ПРИЄДНУЙТЕСЬ</h3>
 						<ul class="footer__list">
-							<li class="footer__list-item">
-								<a href="" class="footer__list-link animation"
-									><svg class="footer__list-icon">
-										<use
-											href="./images/symbol-defs.svg#icon-instagram"
-										></use></svg
-								></a>
+							<li class="footer__list-item anim">
+								<a href="" class="footer__list-link anim">
+									<svg class="footer__list-icon anim">
+										<use href="./images/symbol-defs.svg#icon-instagram"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__list-link animation"
-									><svg class="footer__list-icon">
-										<use
-											href="./images/symbol-defs.svg#icon-twitter"
-										></use></svg
-								></a>
+							<li class="footer__list-item anim">
+								<a href="" class="footer__list-link anim">
+									<svg class="footer__list-icon anim">
+										<use href="./images/symbol-defs.svg#icon-twitter"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__list-link animation"
-									><svg class="footer__list-icon">
-										<use
-											href="./images/symbol-defs.svg#icon-facebook"
-										></use></svg
-								></a>
+							<li class="footer__list-item anim">
+								<a href="" class="footer__list-link anim">
+									<svg class="footer__list-icon anim">
+										<use href="./images/symbol-defs.svg#icon-facebook"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__list-link animation"
-									><svg class="footer__list-icon">
-										<use
-											href="./images/symbol-defs.svg#icon-linkedin"
-										></use></svg
-								></a>
+							<li class="footer__list-item anim">
+								<a href="" class="footer__list-link anim">
+									<svg class="footer__list-icon anim">
+										<use href="./images/symbol-defs.svg#icon-linkedin"></use>
+									</svg>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -203,5 +223,12 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="./modal.js"></script>
+		<script src="./menu.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>

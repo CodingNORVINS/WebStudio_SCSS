@@ -215,6 +215,17 @@ body {
     max-width: 100%;
   }
 }
+.anim {
+  -webkit-transition-property: color, background-color, fill, opacity, -webkit-box-shadow;
+  transition-property: color, background-color, fill, opacity, -webkit-box-shadow;
+  transition-property: color, background-color, fill, box-shadow, opacity;
+  transition-property: color, background-color, fill, box-shadow, opacity, -webkit-box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
 .header {
   padding: 24px 0;
   border-bottom: 1px solid;
@@ -479,42 +490,48 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/desktop/background.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/background.jpg);
   height: 600px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop/background.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/background.jpg");
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+/* Desktop Retina */
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/desktop-2x/background-2x.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop-2x/background-2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop-2x/background-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop-2x/background-2x.jpg");
   }
 }
-@media screen and (max-width: 1199px) and (min-width: 768px) {
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/tablet/background-tablet.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/background-tablet.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet/background-tablet.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/background-tablet.jpg");
   }
 }
-@media screen and (max-width: 1199px) and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-width: 768px) and (min-resolution: 192dpi), screen and (max-width: 1199px) and (min-width: 768px) and (min-resolution: 2dppx) {
+/* Tablet Retina */
+@media (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/tablet-2x/background-tablet-2x.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet-2x/background-tablet-2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet-2x/background-tablet-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet-2x/background-tablet-2x.jpg");
   }
 }
-@media screen and (max-width: 767px) {
+/* Mobile */
+@media (max-width: 767px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/mobile/background-mobile.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/background-mobile.jpg);
-  }
-}
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/mobile-2x/background-mobile-2x.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-2x/background-mobile-2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/background-mobile.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/background-mobile.jpg");
     height: 400px;
   }
 }
+/* Mobile Retina */
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi), (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile-2x/background-mobile-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile-2x/background-mobile-2x.jpg");
+  }
+}
+/* Hero Title */
 .hero__title {
   color: white;
   font-weight: 900;
@@ -531,6 +548,7 @@ body {
   }
 }
 
+/* Hero Button */
 .hero__btn {
   color: white;
   background-color: rgb(33, 150, 243);
@@ -543,8 +561,8 @@ body {
 }
 @media (max-width: 1199px) {
   .hero__btn {
-    margin-bottom: 100px;
     width: 200px;
+    margin-bottom: 100px;
   }
 }
 
@@ -754,7 +772,7 @@ body {
 .details-card__title--attention::before {
   background-image: url("../images/desktop/antenna.png");
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .details-card__title--attention::before {
     background-image: url("../images/desktop-2x/antenna-2x.png");
   }
@@ -762,7 +780,7 @@ body {
 .details-card__title--punctuality::before {
   background-image: url("../images/desktop/clock.png");
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .details-card__title--punctuality::before {
     background-image: url("../images/desktop-2x/clock-2x.png");
   }
@@ -770,7 +788,7 @@ body {
 .details-card__title--planning::before {
   background-image: url("../images/desktop/diagram.png");
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .details-card__title--planning::before {
     background-image: url("../images/desktop-2x/diagram-2x.png");
   }
@@ -778,7 +796,7 @@ body {
 .details-card__title--tech::before {
   background-image: url("../images/desktop/astronaut.png");
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .details-card__title--tech::before {
     background-image: url("../images/desktop-2x/astronaut-2x.png");
   }
@@ -789,6 +807,7 @@ body {
   color: rgb(117, 117, 117);
 }
 
+/* Tablet */
 @media (max-width: 1199px) {
   .details__list {
     gap: 30px;
@@ -797,6 +816,7 @@ body {
     width: calc(50% - 15px);
   }
 }
+/* Mobile */
 @media (max-width: 767px) {
   .details__item {
     width: 100%;
